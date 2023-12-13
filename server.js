@@ -5,10 +5,12 @@ const morgan = require('morgan');
 const authRoute = require('./routes/authRoutes');
 const categoryRoute = require('./routes/categoryRoute');
 const productRoute = require('./routes/productRoute');
+const cors = require('cors')
 
 dbConnect();
 
 const app = express();
+app.use(cors());
 
 //middleware
 app.use(express.json());
